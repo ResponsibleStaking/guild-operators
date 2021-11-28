@@ -406,7 +406,7 @@
 			  external-check path \"/usr/bin:/bin:/tmp:/sbin:/usr/sbin\"
 			  external-check command ${CNODE_HOME}/scripts/grest-poll.sh
 			  server local 127.0.0.1:8050 check inter 20000
-			  server koios-ssl ${KOIOS_SRV}:8453 check inter 60000 backup ssl verify none
+			  server koios-ssl ${KOIOS_SRV}:8453 backup ssl verify none
 			  ## Ensure to end server name with 'ssl' if enabled
 			  http-response cache-store grestcache
 			  http-response set-header X-Frame-Options: DENY
